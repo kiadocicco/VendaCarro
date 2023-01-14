@@ -30,15 +30,18 @@ public class Pagamento {
 		switch(opcao){
 			
 			case 1:	
-				System.out.println("Pagamento em 24 vezes no valor de: \n"+ "Entrada:"+ entrada +"\nParcelamento: 24x "+ (preco-entrada)/24);
+				double juros24=(((preco-entrada)/24)*0.001);
+				System.out.println("Pagamento em 24 vezes no valor de: \n"+ "Entrada:"+ entrada +"\nParcelamento: 24x "+ juros24);
 				bool=false;
 				break;
 			case 2:	
-				System.out.println("Pagamento em 48 vezes no valor de: \n"+ "Entrada:"+ entrada +"\nParcelamento: 48x"+ (preco-entrada)/48);
+				double juros48=(((preco-entrada)/24)*0.002);
+				System.out.println("Pagamento em 48 vezes no valor de: \n"+ "Entrada:"+ entrada +"\nParcelamento: 48x"+ juros48);
 				bool=false;
 				break;
 			case 3:	
-				System.out.println("Pagamento em 72 vezes no valor de: \n"+ "Entrada:"+ entrada +"\nParcelamento: 72x"+ (preco-entrada)/72);
+				double juros72=(((preco-entrada)/24)*0.003);
+				System.out.println("Pagamento em 72 vezes no valor de: \n"+ "Entrada:"+ entrada +"\nParcelamento: 72x"+ juros72);
 				bool=false;
 				break;
 			default:
